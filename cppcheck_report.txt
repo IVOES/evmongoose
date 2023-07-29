@@ -1,0 +1,716 @@
+example/simplest_web.c:8:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[] = "Hello EvMG: API Test\n";
+      ^
+example/simplest_web_ssl.c:10:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[] = "Hello EvMG: API Test\n";
+      ^
+src/lua/lua_mongoose.c:948:4: warning:inconclusive: The buffer 'client_id' may not be null-terminated after the call to strncpy(). [terminateStrncpy]
+   strncpy(client_id, lua_tostring(L, -1), sizeof(client_id));
+   ^
+src/lua/lua_mongoose.c:1067:14: style: The scope of the variable 'data' can be reduced. [variableScope]
+ const char *data;
+             ^
+src/lua/lua_posix.c:218:12: style: Checking if unsigned expression 'count' is less than zero. [unsignedLessThanZero]
+ if (count < 0) {
+           ^
+src/lua/lua_posix.c:461:0: information: Skipping configuration 'SIGPOLL' since the value of 'SIGPOLL' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ EVMG_LUA_SETCONST(SIGPOLL);
+^
+src/lua/lua_posix.c:465:0: information: Skipping configuration 'SIGPWR' since the value of 'SIGPWR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ EVMG_LUA_SETCONST(SIGPWR);
+^
+src/lua/lua_posix.c:470:0: information: Skipping configuration 'SIGSTKFLT' since the value of 'SIGSTKFLT' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ EVMG_LUA_SETCONST(SIGSTKFLT);
+^
+src/mongoose.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 145 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+mongoose/src/http.c:131:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+
+  ^
+mongoose/src/http.c:357:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+
+  ^
+common/base64.c:67:15: warning: Either the condition 'ctx->chunk_size==3' is redundant or the array 'ctx->chunk[3]' is accessed at index 3, which is out of bounds. [arrayIndexOutOfBoundsCond]
+
+              ^
+common/base64.c:68:25: note: Assuming that condition 'ctx->chunk_size==3' is not redundant
+
+                        ^
+common/base64.c:67:15: note: Array index out of bounds
+
+              ^
+mongoose/src/resolv.c:252:5: warning:inconclusive: The buffer 'mg_dns_server' may not be null-terminated after the call to strncpy(). [terminateStrncpy]
+
+    ^
+mongoose/src/http.c:438:24: warning: Identical inner 'if' condition is always true. [identicalInnerCondition]
+
+                       ^
+mongoose/src/http.c:436:27: note: outer condition: pd->cgi.cgi_nc!=NULL
+
+                          ^
+mongoose/src/http.c:438:24: note: identical inner condition: pd->cgi.cgi_nc!=NULL
+
+                       ^
+mongoose/src/http.c:2282:9: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'month_str[32]'. [invalidScanfFormatWidth_smaller]
+
+        ^
+mongoose/src/http.c:2284:9: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'month_str[32]'. [invalidScanfFormatWidth_smaller]
+
+        ^
+mongoose/src/http.c:2286:9: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'month_str[32]'. [invalidScanfFormatWidth_smaller]
+
+        ^
+mongoose/src/http.c:2288:9: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'month_str[32]'. [invalidScanfFormatWidth_smaller]
+
+        ^
+mongoose/src/net.c:475:14: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+             ^
+mongoose/src/http.c:1701:9: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+        ^
+mongoose/src/http_ssi.c:31:7: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+      ^
+mongoose/src/http_ssi.c:34:14: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+             ^
+mongoose/src/http_ssi.c:40:14: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+             ^
+mongoose/src/http_ssi.c:41:14: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+             ^
+mongoose/src/resolv.c:133:26: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+
+                         ^
+mongoose/src/net.c:649:5: warning: Either the condition 'nc!=NULL' is redundant or there is possible null pointer dereference: nc. [nullPointerRedundantCheck]
+
+    ^
+mongoose/src/net.c:644:10: note: Assuming that condition 'nc!=NULL' is not redundant
+
+         ^
+mongoose/src/net.c:649:5: note: Null pointer dereference
+
+    ^
+mongoose/src/http.c:1267:33: warning:inconclusive: Either the condition '!reason' is redundant or there is possible null pointer dereference: reason. [nullPointerRedundantCheck]
+
+                                ^
+mongoose/src/http.c:1265:7: note: Assuming that condition '!reason' is not redundant
+
+      ^
+mongoose/src/http.c:1267:33: note: Null pointer dereference
+
+                                ^
+mongoose/src/http.c:1269:30: warning:inconclusive: Either the condition '!reason' is redundant or there is possible null pointer dereference: reason. [nullPointerRedundantCheck]
+
+                             ^
+mongoose/src/http.c:1265:7: note: Assuming that condition '!reason' is not redundant
+
+      ^
+mongoose/src/http.c:1269:30: note: Null pointer dereference
+
+                             ^
+mongoose/src/http_cgi.c:301:33: warning: Either the condition 'path_info!=NULL' is redundant or there is possible null pointer dereference: path_info. [nullPointerRedundantCheck]
+
+                                ^
+mongoose/src/http_cgi.c:311:17: note: Assuming that condition 'path_info!=NULL' is not redundant
+
+                ^
+mongoose/src/http_cgi.c:301:33: note: Null pointer dereference
+
+                                ^
+mongoose/src/http.c:2169:23: warning: Either the condition 'lp==NULL' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+
+                      ^
+mongoose/src/http.c:2172:12: note: Assuming that condition 'lp==NULL' is not redundant
+
+           ^
+mongoose/src/http.c:2169:23: note: Null pointer addition
+
+                      ^
+mongoose/src/net.c:939:11: style: Variable 'dummy' is reassigned a value before the old one has been used. [redundantAssignment]
+
+          ^
+mongoose/src/net.c:937:11: note: dummy is assigned
+
+          ^
+mongoose/src/net.c:939:11: note: dummy is overwritten
+
+          ^
+mongoose/src/net_if_socket.c:641:7: style: Redundant initialization for 'now'. The initialized value is overwritten before it is read. [redundantInitialization]
+
+      ^
+mongoose/src/net_if_socket.c:561:14: note: now is initialized
+
+             ^
+mongoose/src/net_if_socket.c:641:7: note: now is overwritten
+
+      ^
+mongoose/src/net_if_socket.c:701:13: style: Variable 'sock' is reassigned a value before the old one has been used. [redundantAssignment]
+
+            ^
+mongoose/src/net_if_socket.c:694:8: note: sock is assigned
+
+       ^
+mongoose/src/net_if_socket.c:701:13: note: sock is overwritten
+
+            ^
+mongoose/src/net.c:694:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+
+      ^
+mongoose/src/net.c:966:16: style: The scope of the variable 'flag' can be reduced. [variableScope]
+
+               ^
+mongoose/src/http.c:547:7: style: The scope of the variable 'matched' can be reduced. [variableScope]
+
+      ^
+mongoose/src/http.c:1514:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+
+      ^
+mongoose/src/http.c:1514:10: style: The scope of the variable 'j' can be reduced. [variableScope]
+
+         ^
+mongoose/src/http.c:1542:15: style: The scope of the variable 'p' can be reduced. [variableScope]
+
+              ^
+mongoose/src/http.c:1723:8: style: The scope of the variable 'buf' can be reduced. [variableScope]
+
+       ^
+mongoose/src/http.c:1724:15: style: The scope of the variable 'p' can be reduced. [variableScope]
+
+              ^
+mongoose/src/http.c:1725:9: style: The scope of the variable 'fp' can be reduced. [variableScope]
+
+        ^
+mongoose/src/http.c:1841:8: style: The scope of the variable 'path' can be reduced. [variableScope]
+
+       ^
+mongoose/src/http.c:1843:18: style: The scope of the variable 'dp' can be reduced. [variableScope]
+
+                 ^
+mongoose/src/http.c:2279:47: style: The scope of the variable 'leap_days' can be reduced. [variableScope]
+
+                                              ^
+mongoose/src/http.c:2279:58: style: The scope of the variable 'days' can be reduced. [variableScope]
+
+                                                         ^
+mongoose/src/http_cgi.c:113:7: style: The scope of the variable 'buf4' can be reduced. [variableScope]
+
+      ^
+mongoose/src/http_cgi.c:229:7: style: The scope of the variable 'n' can be reduced. [variableScope]
+
+      ^
+mongoose/src/http_cgi.c:231:11: style: The scope of the variable 'ap' can be reduced. [variableScope]
+
+          ^
+mongoose/src/util.c:179:10: style: The scope of the variable 'idx' can be reduced. [variableScope]
+
+         ^
+mongoose/src/util.c:207:19: style: The scope of the variable 'n' can be reduced. [variableScope]
+
+                  ^
+mongoose/src/dns.c:206:18: style: The scope of the variable 'data_len' can be reduced. [variableScope]
+
+                 ^
+mongoose/src/resolv.c:43:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+
+      ^
+mongoose/src/resolv.c:46:11: style: The scope of the variable 'subkey' can be reduced. [variableScope]
+
+          ^
+mongoose/src/resolv.c:46:24: style: The scope of the variable 'value' can be reduced. [variableScope]
+
+                       ^
+mongoose/src/http.c:424:28: style: Checking if unsigned expression 'left' is less than zero. [unsignedLessThanZero]
+
+                           ^
+mongoose/src/http.c:2808:30: style: Checking if unsigned expression 'buf_len' is less than zero. [unsignedLessThanZero]
+
+                             ^
+mongoose/src/http.c:2809:52: style: Checking if unsigned expression 'hl=mg_http_get_request_len(buf,buf_len)' is less than zero. [unsignedLessThanZero]
+
+                                                   ^
+mongoose/src/util.c:110:26: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+
+                         ^
+mongoose/src/http.c:1634:59: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+
+                                                          ^
+mongoose/src/http.c:1637:42: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+
+                                         ^
+mongoose/src/http.c:1651:33: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+
+                                ^
+common/cs_dirent.c:32:26: style:inconclusive: Function 'opendir' argument 1 names different: declaration 'dir_name' definition 'name'. [funcArgNamesDifferent]
+
+                         ^
+common/cs_dirent.h:31:26: note: Function 'opendir' argument 1 names different: declaration 'dir_name' definition 'name'.
+
+                         ^
+common/cs_dirent.c:32:26: note: Function 'opendir' argument 1 names different: declaration 'dir_name' definition 'name'.
+
+                         ^
+common/cs_dirent.c:57:19: style:inconclusive: Function 'closedir' argument 1 names different: declaration 'dir' definition 'd'. [funcArgNamesDifferent]
+
+                  ^
+common/cs_dirent.h:32:19: note: Function 'closedir' argument 1 names different: declaration 'dir' definition 'd'.
+
+                  ^
+common/cs_dirent.c:57:19: note: Function 'closedir' argument 1 names different: declaration 'dir' definition 'd'.
+
+                  ^
+common/cs_dirent.c:73:29: style:inconclusive: Function 'readdir' argument 1 names different: declaration 'dir' definition 'd'. [funcArgNamesDifferent]
+
+                            ^
+common/cs_dirent.h:33:29: note: Function 'readdir' argument 1 names different: declaration 'dir' definition 'd'.
+
+                            ^
+common/cs_dirent.c:73:29: note: Function 'readdir' argument 1 names different: declaration 'dir' definition 'd'.
+
+                            ^
+common/md5.c:54:24: style:inconclusive: Function 'MD5_Init' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                       ^
+common/md5.h:26:24: note: Function 'MD5_Init' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                       ^
+common/md5.c:54:24: note: Function 'MD5_Init' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                       ^
+common/md5.c:146:26: style:inconclusive: Function 'MD5_Update' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                         ^
+common/md5.h:27:26: note: Function 'MD5_Update' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                         ^
+common/md5.c:146:26: note: Function 'MD5_Update' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                         ^
+common/md5.c:146:52: style:inconclusive: Function 'MD5_Update' argument 2 names different: declaration 'data' definition 'buf'. [funcArgNamesDifferent]
+
+                                                   ^
+common/md5.h:27:50: note: Function 'MD5_Update' argument 2 names different: declaration 'data' definition 'buf'.
+
+                                                 ^
+common/md5.c:146:52: note: Function 'MD5_Update' argument 2 names different: declaration 'data' definition 'buf'.
+
+                                                   ^
+common/md5.c:181:30: style:inconclusive: Function 'MD5_Final' argument 1 names different: declaration 'md' definition 'digest'. [funcArgNamesDifferent]
+
+                             ^
+common/md5.h:28:31: note: Function 'MD5_Final' argument 1 names different: declaration 'md' definition 'digest'.
+
+                              ^
+common/md5.c:181:30: note: Function 'MD5_Final' argument 1 names different: declaration 'md' definition 'digest'.
+
+                             ^
+common/md5.c:181:51: style:inconclusive: Function 'MD5_Final' argument 2 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                                                  ^
+common/md5.h:28:44: note: Function 'MD5_Final' argument 2 names different: declaration 'c' definition 'ctx'.
+
+                                           ^
+common/md5.c:181:51: note: Function 'MD5_Final' argument 2 names different: declaration 'c' definition 'ctx'.
+
+                                                  ^
+common/mbuf.c:22:42: style:inconclusive: Function 'mbuf_init' argument 2 names different: declaration 'initial_capacity' definition 'initial_size'. [funcArgNamesDifferent]
+
+                                         ^
+common/mbuf.h:41:38: note: Function 'mbuf_init' argument 2 names different: declaration 'initial_capacity' definition 'initial_size'.
+
+                                     ^
+common/mbuf.c:22:42: note: Function 'mbuf_init' argument 2 names different: declaration 'initial_capacity' definition 'initial_size'.
+
+                                         ^
+common/mbuf.c:90:48: style:inconclusive: Function 'mbuf_append' argument 2 names different: declaration 'data' definition 'buf'. [funcArgNamesDifferent]
+
+                                               ^
+common/mbuf.h:51:47: note: Function 'mbuf_append' argument 2 names different: declaration 'data' definition 'buf'.
+
+                                              ^
+common/mbuf.c:90:48: note: Function 'mbuf_append' argument 2 names different: declaration 'data' definition 'buf'.
+
+                                               ^
+common/mbuf.c:90:60: style:inconclusive: Function 'mbuf_append' argument 3 names different: declaration 'data_size' definition 'len'. [funcArgNamesDifferent]
+
+                                                           ^
+common/mbuf.h:51:60: note: Function 'mbuf_append' argument 3 names different: declaration 'data_size' definition 'len'.
+
+                                                           ^
+common/mbuf.c:90:60: note: Function 'mbuf_append' argument 3 names different: declaration 'data_size' definition 'len'.
+
+                                                           ^
+common/mbuf.c:95:42: style:inconclusive: Function 'mbuf_remove' argument 2 names different: declaration 'data_size' definition 'n'. [funcArgNamesDifferent]
+
+                                         ^
+common/mbuf.h:63:40: note: Function 'mbuf_remove' argument 2 names different: declaration 'data_size' definition 'n'.
+
+                                       ^
+common/mbuf.c:95:42: note: Function 'mbuf_remove' argument 2 names different: declaration 'data_size' definition 'n'.
+
+                                         ^
+common/mg_str.c:28:34: warning: Function 'mg_vcmp' argument order different: declaration 'str2, str1' definition 'str1, str2' [funcArgOrderDifferent]
+
+                                 ^
+common/mg_str.h:39:34: note: Function 'mg_vcmp' argument order different: declaration 'str2, str1' definition 'str1, str2'
+
+                                 ^
+common/mg_str.c:28:34: note: Function 'mg_vcmp' argument order different: declaration 'str2, str1' definition 'str1, str2'
+
+                                 ^
+common/mg_str.c:38:38: warning: Function 'mg_vcasecmp' argument order different: declaration 'str2, str1' definition 'str1, str2' [funcArgOrderDifferent]
+
+                                     ^
+common/mg_str.h:45:38: note: Function 'mg_vcasecmp' argument order different: declaration 'str2, str1' definition 'str1, str2'
+
+                                     ^
+common/mg_str.c:38:38: note: Function 'mg_vcasecmp' argument order different: declaration 'str2, str1' definition 'str1, str2'
+
+                                     ^
+common/sha1.c:219:52: style:inconclusive: Function 'cs_hmac_sha1' argument 2 names different: declaration 'key_len' definition 'keylen'. [funcArgNamesDifferent]
+
+                                                   ^
+common/sha1.h:31:52: note: Function 'cs_hmac_sha1' argument 2 names different: declaration 'key_len' definition 'keylen'.
+
+                                                   ^
+common/sha1.c:219:52: note: Function 'cs_hmac_sha1' argument 2 names different: declaration 'key_len' definition 'keylen'.
+
+                                                   ^
+common/sha1.c:220:40: style:inconclusive: Function 'cs_hmac_sha1' argument 3 names different: declaration 'text' definition 'data'. [funcArgNamesDifferent]
+
+                                       ^
+common/sha1.h:32:40: note: Function 'cs_hmac_sha1' argument 3 names different: declaration 'text' definition 'data'.
+
+                                       ^
+common/sha1.c:220:40: note: Function 'cs_hmac_sha1' argument 3 names different: declaration 'text' definition 'data'.
+
+                                       ^
+common/sha1.c:220:53: style:inconclusive: Function 'cs_hmac_sha1' argument 4 names different: declaration 'text_len' definition 'datalen'. [funcArgNamesDifferent]
+
+                                                    ^
+common/sha1.h:32:53: note: Function 'cs_hmac_sha1' argument 4 names different: declaration 'text_len' definition 'datalen'.
+
+                                                    ^
+common/sha1.c:220:53: note: Function 'cs_hmac_sha1' argument 4 names different: declaration 'text_len' definition 'datalen'.
+
+                                                    ^
+common/str_util.c:88:57: style:inconclusive: Function 'c_vsnprintf' argument 3 names different: declaration 'format' definition 'fmt'. [funcArgNamesDifferent]
+
+                                                        ^
+common/str_util.h:46:57: note: Function 'c_vsnprintf' argument 3 names different: declaration 'format' definition 'fmt'.
+
+                                                        ^
+common/str_util.c:88:57: note: Function 'c_vsnprintf' argument 3 names different: declaration 'format' definition 'fmt'.
+
+                                                        ^
+common/str_util.c:226:56: style:inconclusive: Function 'c_snprintf' argument 3 names different: declaration 'format' definition 'fmt'. [funcArgNamesDifferent]
+
+                                                       ^
+common/str_util.h:45:56: note: Function 'c_snprintf' argument 3 names different: declaration 'format' definition 'fmt'.
+
+                                                       ^
+common/str_util.c:226:56: note: Function 'c_snprintf' argument 3 names different: declaration 'format' definition 'fmt'.
+
+                                                       ^
+mongoose/src/net.c:84:55: style:inconclusive: Function 'mg_remove_conn' argument 1 names different: declaration 'c' definition 'conn'. [funcArgNamesDifferent]
+
+                                                      ^
+mongoose/src/internal.h:65:55: note: Function 'mg_remove_conn' argument 1 names different: declaration 'c' definition 'conn'.
+
+                                                      ^
+mongoose/src/net.c:84:55: note: Function 'mg_remove_conn' argument 1 names different: declaration 'c' definition 'conn'.
+
+                                                      ^
+mongoose/src/net.c:190:33: style:inconclusive: Function 'mg_mgr_init' argument 1 names different: declaration 'mgr' definition 'm'. [funcArgNamesDifferent]
+
+                                ^
+mongoose/src/net.h:185:33: note: Function 'mg_mgr_init' argument 1 names different: declaration 'mgr' definition 'm'.
+
+                                ^
+mongoose/src/net.c:190:33: note: Function 'mg_mgr_init' argument 1 names different: declaration 'mgr' definition 'm'.
+
+                                ^
+mongoose/src/net.c:200:37: style:inconclusive: Function 'mg_mgr_init_opt' argument 1 names different: declaration 'mgr' definition 'm'. [funcArgNamesDifferent]
+
+                                    ^
+mongoose/src/net.h:214:37: note: Function 'mg_mgr_init_opt' argument 1 names different: declaration 'mgr' definition 'm'.
+
+                                    ^
+mongoose/src/net.c:200:37: note: Function 'mg_mgr_init_opt' argument 1 names different: declaration 'mgr' definition 'm'.
+
+                                    ^
+mongoose/src/net.c:304:42: style:inconclusive: Function 'mg_mgr_poll' argument 2 names different: declaration 'milli' definition 'timeout_ms'. [funcArgNamesDifferent]
+
+                                         ^
+mongoose/src/net.h:232:41: note: Function 'mg_mgr_poll' argument 2 names different: declaration 'milli' definition 'timeout_ms'.
+
+                                        ^
+mongoose/src/net.c:304:42: note: Function 'mg_mgr_poll' argument 2 names different: declaration 'milli' definition 'timeout_ms'.
+
+                                         ^
+mongoose/src/http.c:1252:41: style:inconclusive: Function 'mg_send_head' argument 1 names different: declaration 'n' definition 'c'. [funcArgNamesDifferent]
+
+                                        ^
+mongoose/src/http_server.h:490:41: note: Function 'mg_send_head' argument 1 names different: declaration 'n' definition 'c'.
+
+                                        ^
+mongoose/src/http.c:1252:41: note: Function 'mg_send_head' argument 1 names different: declaration 'n' definition 'c'.
+
+                                        ^
+mongoose/src/http.c:2803:62: style:inconclusive: Function 'mg_parse_multipart' argument 7 names different: declaration 'chunk' definition 'data'. [funcArgNamesDifferent]
+
+                                                             ^
+mongoose/src/http_server.h:106:62: note: Function 'mg_parse_multipart' argument 7 names different: declaration 'chunk' definition 'data'.
+
+                                                             ^
+mongoose/src/http.c:2803:62: note: Function 'mg_parse_multipart' argument 7 names different: declaration 'chunk' definition 'data'.
+
+                                                             ^
+mongoose/src/http.c:2804:35: style:inconclusive: Function 'mg_parse_multipart' argument 8 names different: declaration 'chunk_len' definition 'data_len'. [funcArgNamesDifferent]
+
+                                  ^
+mongoose/src/http_server.h:107:35: note: Function 'mg_parse_multipart' argument 8 names different: declaration 'chunk_len' definition 'data_len'.
+
+                                  ^
+mongoose/src/http.c:2804:35: note: Function 'mg_parse_multipart' argument 8 names different: declaration 'chunk_len' definition 'data_len'.
+
+                                  ^
+mongoose/src/http_websocket.c:196:60: style:inconclusive: Function 'mg_send_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'. [funcArgNamesDifferent]
+
+                                                           ^
+mongoose/src/http.h:272:60: note: Function 'mg_send_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                           ^
+mongoose/src/http_websocket.c:196:60: note: Function 'mg_send_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                           ^
+mongoose/src/http_websocket.c:197:37: style:inconclusive: Function 'mg_send_websocket_frame' argument 4 names different: declaration 'data_len' definition 'len'. [funcArgNamesDifferent]
+
+                                    ^
+mongoose/src/http.h:273:55: note: Function 'mg_send_websocket_frame' argument 4 names different: declaration 'data_len' definition 'len'.
+
+                                                      ^
+mongoose/src/http_websocket.c:197:37: note: Function 'mg_send_websocket_frame' argument 4 names different: declaration 'data_len' definition 'len'.
+
+                                    ^
+mongoose/src/http_websocket.c:210:61: style:inconclusive: Function 'mg_send_websocket_framev' argument 2 names different: declaration 'op_and_flags' definition 'op'. [funcArgNamesDifferent]
+
+                                                            ^
+mongoose/src/http.h:280:61: note: Function 'mg_send_websocket_framev' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                            ^
+mongoose/src/http_websocket.c:210:61: note: Function 'mg_send_websocket_framev' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                            ^
+mongoose/src/http_websocket.c:211:52: style:inconclusive: Function 'mg_send_websocket_framev' argument 3 names different: declaration 'strings' definition 'strv'. [funcArgNamesDifferent]
+
+                                                   ^
+mongoose/src/http.h:281:52: note: Function 'mg_send_websocket_framev' argument 3 names different: declaration 'strings' definition 'strv'.
+
+                                                   ^
+mongoose/src/http_websocket.c:211:52: note: Function 'mg_send_websocket_framev' argument 3 names different: declaration 'strings' definition 'strv'.
+
+                                                   ^
+mongoose/src/http_websocket.c:211:62: style:inconclusive: Function 'mg_send_websocket_framev' argument 4 names different: declaration 'num_strings' definition 'strvcnt'. [funcArgNamesDifferent]
+
+                                                             ^
+mongoose/src/http.h:281:65: note: Function 'mg_send_websocket_framev' argument 4 names different: declaration 'num_strings' definition 'strvcnt'.
+
+                                                                ^
+mongoose/src/http_websocket.c:211:62: note: Function 'mg_send_websocket_framev' argument 4 names different: declaration 'num_strings' definition 'strvcnt'.
+
+                                                             ^
+mongoose/src/http_websocket.c:232:62: style:inconclusive: Function 'mg_printf_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'. [funcArgNamesDifferent]
+
+                                                             ^
+mongoose/src/http.h:289:62: note: Function 'mg_printf_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                             ^
+mongoose/src/http_websocket.c:232:62: note: Function 'mg_printf_websocket_frame' argument 2 names different: declaration 'op_and_flags' definition 'op'.
+
+                                                             ^
+mongoose/src/http_websocket.c:364:72: style:inconclusive: Function 'mg_send_websocket_handshake' argument 2 names different: declaration 'uri' definition 'path'. [funcArgNamesDifferent]
+
+                                                                       ^
+mongoose/src/http.h:195:72: note: Function 'mg_send_websocket_handshake' argument 2 names different: declaration 'uri' definition 'path'.
+
+                                                                       ^
+mongoose/src/http_websocket.c:364:72: note: Function 'mg_send_websocket_handshake' argument 2 names different: declaration 'uri' definition 'path'.
+
+                                                                       ^
+mongoose/src/util.c:16:48: style:inconclusive: Function 'mg_skip' argument 2 names different: declaration 'end_string' definition 'end'. [funcArgNamesDifferent]
+
+                                               ^
+mongoose/src/util.h:36:48: note: Function 'mg_skip' argument 2 names different: declaration 'end_string' definition 'end'.
+
+                                               ^
+mongoose/src/util.c:16:48: note: Function 'mg_skip' argument 2 names different: declaration 'end_string' definition 'end'.
+
+                                               ^
+mongoose/src/util.c:16:65: style:inconclusive: Function 'mg_skip' argument 3 names different: declaration 'delimiters' definition 'delims'. [funcArgNamesDifferent]
+
+                                                                ^
+mongoose/src/util.h:37:33: note: Function 'mg_skip' argument 3 names different: declaration 'delimiters' definition 'delims'.
+
+                                ^
+mongoose/src/util.c:16:65: note: Function 'mg_skip' argument 3 names different: declaration 'delimiters' definition 'delims'.
+
+                                                                ^
+mongoose/src/util.c:72:49: style:inconclusive: Function 'mg_start_thread' argument 2 names different: declaration 'thread_func_param' definition 'p'. [funcArgNamesDifferent]
+
+                                                ^
+mongoose/src/util.h:94:59: note: Function 'mg_start_thread' argument 2 names different: declaration 'thread_func_param' definition 'p'.
+
+                                                          ^
+mongoose/src/util.c:72:49: note: Function 'mg_start_thread' argument 2 names different: declaration 'thread_func_param' definition 'p'.
+
+                                                ^
+mongoose/src/resolv.c:112:44: style:inconclusive: Function 'mg_resolve_from_hosts_file' argument 1 names different: declaration 'host' definition 'name'. [funcArgNamesDifferent]
+
+                                           ^
+mongoose/src/resolv.h:74:44: note: Function 'mg_resolve_from_hosts_file' argument 1 names different: declaration 'host' definition 'name'.
+
+                                           ^
+mongoose/src/resolv.c:112:44: note: Function 'mg_resolve_from_hosts_file' argument 1 names different: declaration 'host' definition 'name'.
+
+                                           ^
+mongoose/src/net_if_socket.c:228:9: style: Local variable 'n' shadows outer variable [shadowVariable]
+
+        ^
+mongoose/src/net_if_socket.c:218:7: note: Shadowed declaration
+
+      ^
+mongoose/src/net_if_socket.c:228:9: note: Shadow variable
+
+        ^
+mongoose/src/http.c:425:12: style: Local variable 'n' shadows outer variable [shadowVariable]
+
+           ^
+mongoose/src/http.c:400:10: note: Shadowed declaration
+
+         ^
+mongoose/src/http.c:425:12: note: Shadow variable
+
+           ^
+mongoose/src/net.c:710:48: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+
+                                               ^
+mongoose/src/http.c:400:12: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+
+           ^
+mongoose/src/mqtt.c:68:11: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+
+          ^
+common/str_util.c:382:3: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+  ^
+common/str_util.c:383:36: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+                                   ^
+common/str_util.c:384:3: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+  ^
+common/str_util.c:405:7: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+      ^
+common/str_util.c:406:43: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+                                          ^
+common/str_util.c:407:7: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+
+      ^
+mongoose/src/http.c:1595:3: portability: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+
+  ^
+mongoose/src/http.c:1595:3: portability: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+
+  ^
+mongoose/src/http_websocket.c:34:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+
+           ^
+mongoose/src/http_websocket.c:34:73: style: The scope of the variable 'len' can be reduced. [variableScope]
+
+                                                                        ^
+mongoose/src/http.c:1267:33: warning: Either the condition '!reason' is redundant or there is possible null pointer dereference: reason. [nullPointerRedundantCheck]
+
+                                ^
+mongoose/src/http.c:1265:7: note: Assuming that condition '!reason' is not redundant
+
+      ^
+mongoose/src/http.c:1267:33: note: Null pointer dereference
+
+                                ^
+mongoose/src/http.c:1269:30: warning: Either the condition '!reason' is redundant or there is possible null pointer dereference: reason. [nullPointerRedundantCheck]
+
+                             ^
+mongoose/src/http.c:1265:7: note: Assuming that condition '!reason' is not redundant
+
+      ^
+mongoose/src/http.c:1269:30: note: Null pointer dereference
+
+                             ^
+common/platforms/lwip/mg_lwip_net_if.c:134:65: warning: Either the condition 'nc!=NULL' is redundant or there is possible null pointer dereference: nc. [nullPointerRedundantCheck]
+
+                                                                ^
+common/platforms/lwip/mg_lwip_net_if.c:124:12: note: Assuming that condition 'nc!=NULL' is not redundant
+
+           ^
+common/platforms/lwip/mg_lwip_net_if.c:121:30: note: Assignment to 'nc=(struct mg_connection*)arg'
+
+                             ^
+common/platforms/lwip/mg_lwip_net_if.c:134:65: note: Null pointer dereference
+
+                                                                ^
+common/platforms/lwip/mg_lwip_net_if.c:275:65: warning: Either the condition 'nc!=NULL' is redundant or there is possible null pointer dereference: nc. [nullPointerRedundantCheck]
+
+                                                                ^
+common/platforms/lwip/mg_lwip_net_if.c:124:12: note: Assuming that condition 'nc!=NULL' is not redundant
+
+           ^
+common/platforms/lwip/mg_lwip_net_if.c:121:30: note: Assignment to 'nc=(struct mg_connection*)arg'
+
+                             ^
+common/platforms/lwip/mg_lwip_net_if.c:156:23: note: Calling function 'mg_lwip_recv_common', 1st argument 'nc' value is 0
+
+                      ^
+common/platforms/lwip/mg_lwip_net_if.c:275:65: note: Null pointer dereference
+
+                                                                ^
+mongoose/src/tun.c:68:7: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+
+      ^
+mongoose/src/tun.c:70:9: note: Found duplicate branches for 'if' and 'else'.
+
+        ^
+mongoose/src/tun.c:68:7: note: Found duplicate branches for 'if' and 'else'.
+
+      ^
+mongoose/src/resolv.c:89:8: style: The scope of the variable 'line' can be reduced. [variableScope]
+
+       ^
+mongoose/src/net_if_socket.c:176:10: style: Variable 'on' is assigned a value that is never used. [unreadVariable]
+
+         ^
+common/platforms/lwip/mg_lwip_net_if.c:275:65: warning: Null pointer dereference: nc [ctunullpointer]
+
+                                                                ^
+common/platforms/lwip/mg_lwip_net_if.c:124:12: note: Assuming that condition 'nc!=NULL' is not redundant
+
+           ^
+common/platforms/lwip/mg_lwip_net_if.c:121:30: note: Assignment to 'nc=(struct mg_connection*)arg'
+
+                             ^
+common/platforms/lwip/mg_lwip_net_if.c:156:22: note: Calling function mg_lwip_recv_common, 1st argument is null
+
+                     ^
+common/platforms/lwip/mg_lwip_net_if.c:275:65: note: Dereferencing argument nc that is null
+
+                                                                ^
+src/lua/lua_mongoose.c:1150:0: style: The function 'luaopen_evmongoose' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
